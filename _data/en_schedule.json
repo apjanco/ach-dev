@@ -1,0 +1,8 @@
+{
+  "items":[
+    {"day": 1, "time": "09:30 AM", "title":"Humans against Humanities", "description":"This is a really great paper." },
+    {"day": 1, "time": "10:00 AM", "title":"Humanities Can be Digital", "description":"Those other papers are not as good as this one." },
+    {"day": 2, "time": "10:30 AM", "title":"Computers are not Machines", "description":"Stop calling us that." },
+    {"day": 3, "time": "12:30 PM", "title":"Can People and Persons be the Same?", "description":"Plurals are hard. " }
+  ]
+}
