@@ -11,7 +11,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li>
-            <a class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-search"></i>&nbsp;Search</a>
+            <!-- <a class="nav-link scrollto" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-search"></i>&nbsp;Search</a> -->
           </li>
             {% if page.lang == 'en' %}
             {% for item in en_navigation.items %}
@@ -32,6 +32,13 @@
                 </li>
             {% endfor %}
             {% endif %}
+            <li>
+              <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                <button onclick="location.href='/en';" type="button" class="btn btn-outline-secondary">EN</button>
+                <button onclick="location.href='/es';" type="button" class="btn btn-outline-secondary">ES</button>
+                <button onclick="location.href='/fr';" type="button" class="btn btn-outline-secondary">FR</button>
+                </div>
+          </li>
         </ul>
         
         <i class="bi bi-list mobile-nav-toggle"></i>
