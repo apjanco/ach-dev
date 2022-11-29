@@ -12,23 +12,24 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Policy"
-    name: "guidelines"
-    folder: "src/en/policies"
+  - label: "FAQ"
+    name: "faq"
     create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+    files: 
+      - label: "FAQ (EN)"
+      - name: "faq"
+      - file: "_data/en_faq.json"
+      fields:
+        - { label: Question, name: question, widget: string }
+        - { label: Answer, name: answer, widget: string }
   - label: "Settings"
     name: "settings"
     editor:
       preview: false
     files:
-      - label: "Navigation"
+      - label: "Navigation (EN)"
         name: "items"
-        file: "src/_data/navigation.yaml"
+        file: "_data/en_navigation.yaml"
         fields:
           - label: Nav Items
             name: items
@@ -38,18 +39,31 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
+      - label: "Navigation (ES)"
+        name: "items"
+        file: "_data/es_navigation.yaml"
         fields:
           - label: Nav Items
-            name: links
+            name: items
             widget: list
+            allow_add: false
             collapsed: false
             fields:
-              - { label: Title, name: title, widget: string }
+              - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
+      - label: "Navigation (FR)"
+        name: "items"
+        file: "_data/fr_navigation.yaml"
+        fields:
+          - label: Nav Items
+            name: items
+            widget: list
+            allow_add: false
+            collapsed: false
+            fields:
+              - { label: Title, name: text, widget: string }
+              - { label: URL, name: url, widget: string }
+      
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
