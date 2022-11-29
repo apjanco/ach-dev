@@ -16,19 +16,80 @@ collections:
     name: "faq"
     create: true
     files: 
-      - label: "FAQ (EN)"
-      - name: "faq"
-      - file: "_data/en_faq.json"
-    fields:
-      - { label: Question, name: question, widget: string }
-      - { label: Answer, name: answer, widget: string }
+      - name: "faq-en"
+        label: "FAQ (EN)"
+        file: "_data/en_faq.json"
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: string }
+      - name: "faq-es"
+        label: "FAQ (Es)"
+        file: "_data/es_faq.json"
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: string } 
+      - name: "faq-fr"
+        label: "FAQ (FR)"
+        file: "_data/fr_faq.json"
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: string } 
+  - label: "Sessions"
+    name: "sessions"
+    create: true
+    files: 
+      - name: "sessions-en"
+        label: "Sessions (EN)"
+        file: "_data/en_schedule.json"
+        fields:
+          - { label: Day, name: day, widget: number, default: 2, value_type: int, min: 1, max: 3}
+          - { label: Time, name: time, widget: string }
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
+  
+  - label: "Speakers"
+    name: "speakers"
+    create: true
+    files: 
+      - name: "speakers-en"
+        label: "Speakers (EN)"
+        file: "_data/en_speakers.json"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Description, name: description, widget: string }
+          - { label: Image, name: image, widget: image, choose_url: true, default: "/uploads/chocolate-dogecoin.jpg", allow_multiple: false }
+    
+      - name: "speakers-es"
+        label: "Speakers (ES)"
+        file: "_data/es_speakers.json"
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: string } 
+      - name: "speakers-fr"
+        label: "Speakers (FR)"
+        file: "_data/fr_speakers.json"
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Answer, name: answer, widget: string } 
+  
+  - label: "Partners"
+    name: "partners"
+    create: true
+    files: 
+      - label: Partners
+        name: partners 
+        file: "_data/partners.yaml"
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Image, name: image, widget: image, choose_url: true, default: "/uploads/chocolate-dogecoin.jpg", allow_multiple: false }
+
   - label: "Settings"
     name: "settings"
     editor:
       preview: false
     files:
       - label: "Navigation (EN)"
-        name: "items"
+        name: "nav-en"
         file: "_data/en_navigation.yaml"
         fields:
           - label: Nav Items
@@ -40,7 +101,7 @@ collections:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
       - label: "Navigation (ES)"
-        name: "items"
+        name: "nav-es"
         file: "_data/es_navigation.yaml"
         fields:
           - label: Nav Items

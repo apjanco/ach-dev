@@ -9,4 +9,8 @@ module.exports = function(eleventyConfig) {
     });
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+    // Copy Static Files to /_Site
+    eleventyConfig.addPassthroughCopy({
+    "./admin/config.yml": "./admin/config.yml",
+    });
   };
