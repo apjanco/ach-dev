@@ -150,21 +150,21 @@ youtube: https://www.youtube.com/watch?v=jDDaplaOz7Q
         <div class="section-header">
           <h2>Partners</h2>
         </div>
-
+        
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-
-          <div class="col-lg-6 col-md-6 col-xs-6">
+          {% set partners = collections.partners %}
+        {% for partner in partners %} 
+        {# {% for name, item in partner %}
+      <li>{{ name }}: {{ item }}</li>
+   {% endfor %} #}
+      
+        <div class="col-lg-6 col-md-6 col-xs-6">
             <div class="supporter-logo">
-              <img src="https://bootstrapmade.com/demo/templates/TheEvent/assets/img/supporters/6.png" class="img-fluid" alt="">
+              <img src="{{ partner.data.image }}" class="img-fluid" alt="{{ partner.data.name }}">
             </div>
           </div>
-
-          <div class="col-lg-6 col-md-6 col-xs-6">
-            <div class="supporter-logo">
-              <img src="https://bootstrapmade.com/demo/templates/TheEvent/assets/img/supporters/6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
+        {% endfor %}
+          
           
 
         </div>
