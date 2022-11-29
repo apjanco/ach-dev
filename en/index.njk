@@ -63,7 +63,7 @@ youtube: https://www.youtube.com/watch?v=jDDaplaOz7Q
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
              {% set en_schedule = collections.sessions %}
             
-            {% for item in en_schedule|sort(attribute='time') %}
+            {% for item in en_schedule|sort(attribute='data.time') %}
               {% if item.data.day == 1 %}
               <div class="row schedule-item">
               <div class="col-md-2"><time>{{ item.data.time }}</time></div>
