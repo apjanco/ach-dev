@@ -19,9 +19,9 @@ collections:
       - label: "FAQ (EN)"
       - name: "faq"
       - file: "_data/en_faq.json"
-      fields:
-        - { label: Question, name: question, widget: string }
-        - { label: Answer, name: answer, widget: string }
+    fields:
+      - { label: Question, name: question, widget: string }
+      - { label: Answer, name: answer, widget: string }
   - label: "Settings"
     name: "settings"
     editor:
