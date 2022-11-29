@@ -12,6 +12,5 @@ module.exports = function(eleventyConfig) {
     // Copy Static Files to /_Site
     eleventyConfig.addPassthroughCopy({
     "./admin/config.yml": "./admin/config.yml",
-    "./static/img": "./static/img"
     });
   };

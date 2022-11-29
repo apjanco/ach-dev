@@ -5,82 +5,32 @@ backend:
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
-media_folder: "/static/img"
-public_folder: "/static/img"
+media_folder: "/assets/img"
+public_folder: "/assets/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "FAQ"
-    name: "faq"
+  - label: "Sessions (EN)"
+    name: "sessions-en"
+    folder: "en/sessions"
     create: true
-    files: 
-      - name: "faq-en"
-        label: "FAQ (EN)"
-        file: "_data/en_faq.json"
-        fields:
-          - { label: Question, name: question, widget: string }
-          - { label: Answer, name: answer, widget: string }
-      - name: "faq-es"
-        label: "FAQ (Es)"
-        file: "_data/es_faq.json"
-        fields:
-          - { label: Question, name: question, widget: string }
-          - { label: Answer, name: answer, widget: string } 
-      - name: "faq-fr"
-        label: "FAQ (FR)"
-        file: "_data/fr_faq.json"
-        fields:
-          - { label: Question, name: question, widget: string }
-          - { label: Answer, name: answer, widget: string } 
-  - label: "Sessions"
-    name: "sessions"
-    create: true
-    files: 
-      - name: "sessions-en"
-        label: "Sessions (EN)"
-        file: "_data/en_schedule.json"
-        fields:
-          - { label: Day, name: day, widget: number, default: 2, value_type: int, min: 1, max: 3}
-          - { label: Time, name: time, widget: string }
-          - { label: Title, name: title, widget: string }
-          - { label: Description, name: description, widget: text }
-  
-  - label: "Speakers"
-    name: "speakers"
-    create: true
-    files: 
-      - name: "speakers-en"
-        label: "Speakers (EN)"
-        file: "_data/en_speakers.json"
-        fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Description, name: description, widget: string }
-          - { label: Image, name: image, widget: image, choose_url: true, default: "/uploads/chocolate-dogecoin.jpg", allow_multiple: false }
-    
-      - name: "speakers-es"
-        label: "Speakers (ES)"
-        file: "_data/es_speakers.json"
-        fields:
-          - { label: Question, name: question, widget: string }
-          - { label: Answer, name: answer, widget: string } 
-      - name: "speakers-fr"
-        label: "Speakers (FR)"
-        file: "_data/fr_speakers.json"
-        fields:
-          - { label: Question, name: question, widget: string }
-          - { label: Answer, name: answer, widget: string } 
+    fields:
+      - { label: Day, name: day, widget: number, default: 2, value_type: int, min: 1, max: 3}
+      - { label: Time, name: time, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
 
-  - label: "Partners"
-    name: "partners-en"
-    folder: "partners"
+ - label: "Speakers (EN)"
+    name: "speakers-en"
+    folder: "en/speakers"
     create: true
-    identifier_field: name
     fields:
       - { label: Name, name: name, widget: string }
-      - { label: Image, name: image, widget: image, choose_url: true, default: "https://t3.ftcdn.net/jpg/05/17/87/74/360_F_517877468_8dx0lFR66R6LIgCOUYJWxun1b3Muv272.jpg", allow_multiple: false }
-      - { label: "Tags", name: "tags", widget: "list", default: ["partners"] }
+      - { label: Description, name: description, widget: string }
+      - { label: Image, name: image, widget: image, choose_url: true, default: "https://t3.ftcdn.net/jpg/05/17/87/74/360_F_517877468_8dx0lFR66R6LIgCOUYJWxun1b3Muv272.jpg", allow_multiple: false }    
+
   - label: "Settings"
     name: "settings"
     editor:
@@ -122,11 +72,3 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      
-      - label: "Meta Settings"
-        name: "settings"
-        file: "_data/settings.yaml"
-        fields:
-          - { label: Name, name: name, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: URL, name: url, widget: string }
