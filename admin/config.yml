@@ -78,7 +78,7 @@ collections:
     files: 
       - label: Partners
         name: partners 
-        file: "_data/partners.yaml"
+        file: "_data/partners.json"
         fields:
           - { label: Name, name: name, widget: string }
           - { label: Image, name: image, widget: image, choose_url: true, default: "/uploads/chocolate-dogecoin.jpg", allow_multiple: false }
