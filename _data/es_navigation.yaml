@@ -4,10 +4,10 @@ items:
   - text: Acerca de
     url: "#about"
   - text: Programa
-    url: "#"
+    url: "#schedule"
   - text: Conferencias
-    url: "#"
+    url: "#speakers"
   - text: Socios
-    url: "#"
+    url: "#partners"
   - text: Preguntas frecuentes
-    url: "#"
+    url: "#faq"
