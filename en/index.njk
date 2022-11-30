@@ -67,7 +67,7 @@ youtube: https://www.youtube.com/watch?v=jDDaplaOz7Q
             {% for item in en_schedule|sort(attribute='data.time') %}
               {% if item.data.day == 1 %}
               <div class="row schedule-item">
-              <div class="col-md-2"><time>{{ item.data.time }}</time></div>
+              <div class="col-md-2"><time>{{ item.data.time.toLocaleTimeString('en') }}</time></div>
               <div class="col-md-10">
                 <h4>{{ item.data.title }}</h4>
                 <p>{{ item.data.description }}</p>
